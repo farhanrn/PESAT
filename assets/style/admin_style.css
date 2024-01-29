@@ -1,0 +1,298 @@
+/* import google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+    margin :0;
+    padding : 0;
+    outline : none;
+    border : none;
+    border : none;
+    text-decoration: none;
+    box-sizing : border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #dfe9f5;
+}
+
+.container{
+    display : grid;
+    grid-template-columns: 280px auto;
+    grid-template-rows: 100vh;
+    grid-template-areas: "sidebar main";
+}
+
+nav{
+    grid-area: sidebar;
+    position : relative;
+    top : 0;
+    bottom : 0;
+    height : 122vh;
+    Left : 0;
+    background: #fff;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+
+.logo{
+    text-align : center;
+    display : flex;
+    margin : 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius : 50%;
+}
+
+.logo span{
+    font-weight : bold;
+    padding-left: 15px;
+    font-size:18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color : rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 280px;
+    padding : 10px;
+}
+
+nav .fas{
+    position : relative;
+    width: 70px;
+    height: 40px;
+    top : 14px;
+    text-align: center;
+}
+
+.nav-item{
+    position : relative;
+    top : 12px;
+    margin-left: 10px;
+}
+
+a:hover{
+    background: #eee;
+}
+
+.logout{
+    position : absolute;
+    bottom   : 0;
+}
+
+
+/* Main Section */
+.main{
+  overflow-x: auto;
+    grid-area: main;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .main-top{
+    display: flex;
+    width: 100%;
+  }
+  .main-top i{
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+  }
+  .main-skills{
+    display: flex;
+    margin-top: 20px;
+  }
+  .main-skills .card{
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .main-skills .card h3{
+    margin: 10px;
+    text-transform: capitalize;
+  }
+  .main-skills .card p{
+    font-size: 12px;
+  }
+  .main-skills .card button{
+    background: orangered;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .main-skills .card button:hover{
+    background: rgba(223, 70, 15, 0.856);
+  }
+  .main-skills .card i{
+    font-size: 22px;
+    padding: 10px;
+  }
+
+
+  .box{
+    width: 33%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgb(235, 233, 233);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .box p{
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .box button{
+    background: #000;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin-top: 3rem;
+    cursor: pointer;
+  }
+  .box button:hover{
+    background: rgba(0, 0, 0, 0.842);
+  }
+  .box i{
+    font-size: 7rem;
+    float: right;
+    margin: -20px 20px 20px 0;
+  }
+  .html{
+    color: rgb(41, 180, 169);
+  }
+  .css{
+    color: rgb(32, 151, 172);
+  }
+  .js{
+    color: rgb(28, 98, 179);
+  }
+  </span>
+  .my-3{
+    display : grid;
+    grid-template-columns : repeat(8, 1fr) /* 8 columns with equal width */
+    grid-gap: 10px;
+  }
+  
+  th,
+  td{
+    padding : 10px;
+    border : 1px solid #4b9ae4
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+  th {
+    background-color : #f2f2f2; 
+    font-weight : bold;
+  }
+  td:last-child,
+  th:last-child{
+    border-right:none;
+  }
+  td:nth-child(8),
+  th:nth-child(8) {
+  grid-column: 7 / -1; /* span the last 2 columns */
+  }
+  td:nth-child(9),
+  th:nth-child(9) {
+  grid-column: 8 / -1; /* span the last column */
+  }
+  td img {
+  width: 100%;
+  height: auto;
+}
+
+.btn{
+  padding:5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor : pointer;
+}
+
+.edit-btn{
+  background-color: #4caf50;
+  color: white;
+  width : 80px;
+}
+
+.delete-btn{
+  background-color: #f44336;
+  color: white;
+  width: 80px;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #024f6d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+td:nth-child(8),
+th:nth-child(8) {
+  grid-column: 7 / -1;
+}
+
+td:nth-child(9),
+th:nth-child(9) {
+  grid-column: 8 / -1;
+}
+
+td img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  width: 80px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  width: 80px;
+}
