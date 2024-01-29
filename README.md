@@ -1,2 +1,5 @@
-# PESAT
-This is a reporting websites from Stasiun Meteorologi Kelas I Sultan Hasanuddin
+
+# Pesat (Pelaporan Kerusakan Alat)
+
+This project is an internship project at the Sultan Hasanuddin Class I Meteorological Station which aims to facilitate integrated and damaged reporting of equipment
+
