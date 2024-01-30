@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2024 at 06:14 AM
+-- Generation Time: Jan 30, 2024 at 02:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -105,6 +105,27 @@ CREATE TABLE `bmkg` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `pesan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `nama`, `email`, `pesan`) VALUES
+(1, '', 'farhanrahman0601@gmail.com', ''),
+(2, 'Luffy', 'luffymugiwara@gmail.com', 'what a good feature!');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pelapor1`
 --
 
@@ -125,7 +146,7 @@ CREATE TABLE `pelapor1` (
 --
 
 INSERT INTO `pelapor1` (`id`, `tanggal`, `nama_pelapor`, `nama_teknisi`, `alat`, `deskripsi_kerusakan`, `foto`, `status`, `action`) VALUES
-(25, '2024-01-29', 'Frinst Yehezkiel', 'Junanto', 'Peralatan AWS-Digitalisasi', 'qwrt', '65b732ab8eabd.png', 'Selesai', '');
+(26, '2024-01-09', 'coba', '', 'Client AWOS AOCC', 'Terdapat Kabel Yang Putus', '65b7ce4d851bf.jpeg', 'Laporan Terkirim', '');
 
 -- --------------------------------------------------------
 
@@ -182,6 +203,12 @@ ALTER TABLE `bmkg`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pelapor1`
 --
 ALTER TABLE `pelapor1`
@@ -216,10 +243,16 @@ ALTER TABLE `bmkg`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `pelapor1`
 --
 ALTER TABLE `pelapor1`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `user`
