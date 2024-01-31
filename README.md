@@ -55,3 +55,10 @@ This project is used by the following companies:
 - Stasiun Meteorologi Kelas I Sultan Hasanuddin
 - Gedung Operasional Aerologi BMKG Sultan Hasanuddin
 
+## Authors
+
+- [@frinst_yfb](https://github.com/frinst21)
+- [@farhanrahman](https://github.com/farhanrn)
+- [@cindymangayuk](https://www.linkedin.com/in/cindy-mangayuk-212505231/)
+
+
