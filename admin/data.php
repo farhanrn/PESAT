@@ -12,7 +12,7 @@ $username = $_SESSION["username"];
 $name = $_SESSION["name"];
 $email = $_SESSION["email"];
 ?>
-<span style="font-family: verdana, geneva, sans-serif;">
+
   <!DOCTYPE html>
   <html lang="en">
 
@@ -20,12 +20,13 @@ $email = $_SESSION["email"];
     <meta charset="UTF-8" />
     <title>Data</title>
     <link rel="stylesheet" href="../assets/style/admin_style.css" />
-    <link rel="icon" href="../assets/favicon.ico" />
+    <link rel="icon" href="img/favicon.ico" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
 
   <body>
+  <span style="font-family: verdana, geneva, sans-serif;">
     <div class="container">
       <!-- Kode Menu SideBar-->
       <nav>
@@ -41,7 +42,7 @@ $email = $_SESSION["email"];
               <i class="fas fa-chart-bar"></i>
               <span class="nav-item">Data Laporan</span>
             </a></li>
-          <li><a href="../logout.php" class="logout">
+          <li><a href="../logout.php">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item">Log out</span>
             </a></li>
@@ -62,7 +63,7 @@ $email = $_SESSION["email"];
             <thead>
               <tr class="table-primary">
                 <th scope="col">Id</th>
-                <th scope="col">tanggal</th>
+                <th scope="col">Tanggal</th>
                 <th scope="col">Nama Pelapor</th>
                 <th scope="col">Nama Teknisi</th>
                 <th scope="col">Nama Alat</th>
@@ -102,7 +103,7 @@ $email = $_SESSION["email"];
                   </td>
                   <td scope="row">
                     <a href="../alat/<?= $data['foto'] ?>" data-lightbox="images">
-                    <img src="../alat/<?= $data['foto'] ?>" width="50px">
+                    <img src="../alat/<?= $data['foto'] ?>">
                   </td>
                   <td scope="row">
                     <?= $data['status'] ?>

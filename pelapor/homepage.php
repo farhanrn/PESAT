@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if (!isset($_SESSION["username"])){
+if (!isset($_SESSION["username"])) {
   header("location: account/login.php");
   exit;
 }
@@ -84,7 +84,9 @@ if (!isset($_SESSION["username"])){
 
       <header class="section-header">
 
-        <p>Selamat Datang <?php echo $_SESSION["nama"]?>! Yuk jelajahi laporan kamu</p>
+        <p>Selamat Datang
+          <?php echo $_SESSION["nama"] ?>! Yuk jelajahi laporan kamu
+        </p>
       </header>
 
       <div class="row gy-4">

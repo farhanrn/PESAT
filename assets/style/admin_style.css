@@ -29,7 +29,7 @@ nav{
     position : relative;
     top : 0;
     bottom : 0;
-    height : 122vh;
+    height : 100vh;
     Left : 0;
     background: #fff;
     width: 250px;
@@ -91,10 +91,10 @@ a:hover{
 
 /* Main Section */
 .main{
-  overflow-x: auto;
+    overflow-x: auto;
     grid-area: main;
     position: relative;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
   }
   
@@ -189,60 +189,6 @@ a:hover{
     grid-template-columns : repeat(8, 1fr) /* 8 columns with equal width */
     grid-gap: 10px;
   }
-  
-  th,
-  td{
-    padding : 10px;
-    border : 1px solid #4b9ae4
-    overflow : hidden;
-    text-overflow : ellipsis;
-    white-space : nowrap;
-  }
-  th {
-    background-color : #f2f2f2; 
-    font-weight : bold;
-  }
-  td:last-child,
-  th:last-child{
-    border-right:none;
-  }
-  td:nth-child(8),
-  th:nth-child(8) {
-  grid-column: 7 / -1; /* span the last 2 columns */
-  }
-  td:nth-child(9),
-  th:nth-child(9) {
-  grid-column: 8 / -1; /* span the last column */
-  }
-  td img {
-  width: 100%;
-  height: auto;
-}
-
-.btn{
-  padding:5px 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor : pointer;
-}
-
-.edit-btn{
-  background-color: #4caf50;
-  color: white;
-  width : 80px;
-}
-
-.delete-btn{
-  background-color: #f44336;
-  color: white;
-  width: 80px;
-}
-
-.table-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-}
 
 th,
 td {
@@ -251,6 +197,9 @@ td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: fit-content;
+  text-align: center;
+  vertical-align: middle;
 }
 
 th {
@@ -258,9 +207,13 @@ th {
   font-weight: bold;
 }
 
+td a{
+  width: 20px;
+}
+
 td:last-child,
 th:last-child {
-  border-right: none;
+  /* border-right: none; */
 }
 
 td:nth-child(8),
@@ -274,7 +227,7 @@ th:nth-child(9) {
 }
 
 td img {
-  width: 100%;
+  width: 70px;
   height: auto;
 }
 
