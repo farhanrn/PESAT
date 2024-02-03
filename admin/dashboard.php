@@ -13,18 +13,18 @@ $name = $_SESSION["name"];
 $email = $_SESSION["email"];
 ?>
 
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../assets/style/admin_style.css" />
-    <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/style/admin_style.css" />
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
 
-  <body>
+<body>
   <span style="font-family: verdana, geneva, sans-serif;">
     <div class="container">
       <nav>
@@ -82,7 +82,7 @@ $email = $_SESSION["email"];
         </div>
       </section>
     </div>
-    </span>
-  </body>
+  </span>
+</body>
 
-  </html>
+</html>

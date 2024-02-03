@@ -50,7 +50,7 @@ function getStatusButtonClass($status)
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Halaman Status</title>
+    <title>Available Data</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -138,64 +138,19 @@ function getStatusButtonClass($status)
         </div>
     </header>
 
-    <section id="services" class="services">
-        <div class="container aos-init aos-animate" data-aos="fade-up">
-            <header class="section-header">
-                <p>Cek Status Laporan
-                    <?php echo $_SESSION["nama"] ?>
-                </p>
-                <br>
-                <br>
-
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <?php
-                        $myid = $_SESSION['nama'];
-                        $query = mysqli_query($connect, "SELECT * FROM pelapor1 WHERE nama_pelapor = '$myid' ");
-                        $no = 1;
-                        while ($data = mysqli_fetch_array($query)) {
-                            ?>
-                            <div class="col">
-                                <div class="card shadow-sm box-update">
-                                    <!-- Use the actual image file path in the img tag -->
-                                    <img src="../../alat/<?php echo $data['foto']; ?>"
-                                        class="bd-placeholder-img card-img-top custom-image" alt="Thumbnail Image">
-                                    <title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                        fill="#eceeef" dy=".3em" style="height: 146px;">
-                                        <p style="font-size: 22px; margin-bottom: 10px;" <b>
-                                            <?php echo $data['alat']; ?></b>
-                                        </p>
-                                        <p class="card-text" style="font-size: 20px;">
-                                            <!-- Adjust the font size as needed -->
-                                            <?php echo $data['deskripsi_kerusakan']; ?>
-                                        </p>
-                                    </text>
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <button type="button"
-                                                    class="btn btn-sm <?php echo getStatusButtonClass($data['status']); ?>">
-                                                    <?php echo $data['status']; ?>
-                                                </button>
-                                            </div>
-                                            <small class="text-body-secondary">
-                                                <?php echo $data['tanggal']; ?>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-            </header>
-
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="../assets/img/data_udh_ada.png" alt="">
+        <h1 class="display-5 fw-bold text-body-emphasis">Data Sudah Ada!</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Laporan yang masuk mungkin sudah dimasukkan</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="formulir.php"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Buat Laporan
+                        Lainnya</button>
+                    <a href="../homepage.php"><button type="button"
+                            class="btn btn-outline-secondary btn-lg px-4">Kembali</button>
+            </div>
         </div>
-
-    </section>
+    </div>
     <!-- Vendor JS Files -->
 </body>
 

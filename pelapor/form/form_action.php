@@ -1,9 +1,9 @@
 <?php include "../../connection/connect.php";
 
 session_start();
-if (!isset($_SESSION["username"])){
-  header("location: ./../account/login.php");
-  exit;
+if (!isset($_SESSION["username"])) {
+    header("location: ./../account/login.php");
+    exit;
 }
 function upload()
 {
@@ -50,21 +50,35 @@ function upload()
 
     return $namaFileBaru;
 }
-//menerima data
-$tanggal      = $_POST["tanggal"];
-$nama         = $_POST["nama_pelapor"];
-$alat         = $_POST["alat"];
-$deskripsi_kerusakan   = $_POST["deskripsi_kerusakan"];
-$nama_foto    = upload() ;
 
+//menerima data // proses data yang diinput user
 
-$sql = "INSERT INTO pelapor1 (nama_pelapor,tanggal,alat,deskripsi_kerusakan,foto,status) VALUE ('$nama', '$tanggal', '$alat', '$deskripsi_kerusakan', '$nama_foto', 'Laporan Terkirim')";
-$query  = mysqli_query ($connect,$sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $tanggal = $_POST["tanggal"];
+    $nama = $_POST["nama_pelapor"];
+    $alat = $_POST["alat"];
+    $deskripsi_kerusakan = $_POST["deskripsi_kerusakan"];
+    $nama_foto = upload();
 
-if($query){
-    header("Location:../track/status.php?message=success");
-}else{
-    echo 'Gagal';
+    // Pengecekan data apakah sudah ada dalam database?
+    $query = "SELECT * FROM pelapor1 WHERE tanggal = '$tanggal' AND nama_pelapor = '$nama' AND alat = '$alat'";
+    $result = $connect->query($query);
+
+    if ($result->num_rows > 0) {
+        // Data sudah ada dalam database, munculkan allert
+        //echo ('Data Sudah Dilaporkan!');
+        header("Location:data_ada.php");
+        exit();
+    } else {
+        $sql = "INSERT INTO pelapor1 (nama_pelapor,tanggal,alat,deskripsi_kerusakan,foto,status) VALUE ('$nama', '$tanggal', '$alat', '$deskripsi_kerusakan', '$nama_foto', 'Laporan Terkirim')";
+        $query = mysqli_query($connect, $sql);
+
+    }
+    if ($query) {
+        header("Location:../track/status.php?message=success");
+    } else {
+        echo 'Gagal';
+    }
 }
 
 ?>

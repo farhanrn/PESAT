@@ -1,9 +1,9 @@
 <?php include "../../connection/connect.php";
 
 session_start();
-if (!isset($_SESSION["username"])){
-  header("location: ./../account/login.php");
-  exit;
+if (!isset($_SESSION["username"])) {
+    header("location: ./../account/login.php");
+    exit;
 }
 ?>
 
@@ -49,8 +49,8 @@ if (!isset($_SESSION["username"])){
                 <form method="post" action="form_action.php" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Pelapor</label>
-                        <input type="text" name="nama_pelapor" class="form-control form-control-lg bg-light fs-6" id="name"
-                            value="<?php echo $_SESSION["nama"]?>" readonly>
+                        <input type="text" name="nama_pelapor" class="form-control form-control-lg bg-light fs-6"
+                            id="name" value="<?php echo $_SESSION["nama"] ?>" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="date" class="form-label">Tanggal Laporan</label>
@@ -70,38 +70,45 @@ if (!isset($_SESSION["username"])){
                                 //         <?php //echo $data['alat']; ?>
                                     </option>
                                     <?php
-                                // }
-                                ?>
+                                    // }
+                                    ?>
                             </select> -->
                             <div class="select-option">
-                            <input type = "text" name="alat" placeholder="Pilih Nama Alat" id="soValue" readonly name="" class="form-control form-control-lg bg-light fs-6">
+                                <input type="text" name="alat" placeholder="Pilih Nama Alat" id="soValue" readonly
+                                    name="" class="form-control form-control-lg bg-light fs-6">
                             </div>
                             <div class="select">
-                            <div class="search">
-                                <input type="text" id="optionSearch" placeholder="Cari" name="" class="form-control form-control-lg bg-light fs-6">
-                            </div> 
+                                <div class="search">
+                                    <input type="text" id="optionSearch" placeholder="Cari" name=""
+                                        class="form-control form-control-lg bg-light fs-6">
+                                </div>
                                 <?php
-                                    $sql    = "SELECT * from alat";
-                                    $result = mysqli_query($connect, $sql);
-                                    while ($data = mysqli_fetch_array($result)){
+                                $sql = "SELECT * from alat";
+                                $result = mysqli_query($connect, $sql);
+                                while ($data = mysqli_fetch_array($result)) {
                                     ?>
-                                    <ul class = "option">
-                                        <li><?php echo $data['alat'];?></li>
+                                    <ul class="option">
+                                        <li>
+                                            <?php echo $data['alat']; ?>
+                                        </li>
                                     </ul>
                                     <?php
-                                    }
-                                    ?>    
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Deskripsi Kerusakan</label>
-                        <input type="textarea" name="deskripsi_kerusakan" class="form-control form-control-lg bg-light fs-6" id="description" rows="3"></textarea>
+                        <textarea name="deskripsi_kerusakan" class="form-control form-control-lg bg-light fs-6"
+                            id="description" rows="10"
+                            style="height: 150px; white-space: pre-wrap; overflow-wrap: break-word;"></textarea>
                     </div>
-                    <div class="mb-3">
+
+                    <div class=" mb-3">
                         <label for="image" class="form-label">Gambar Kerusakan</label>
-                        <input type="file" name="gambar" class="form-control-file" id="gambar-kerusakan" name="gambar-kerusakan"
-                            accept="image/*" capture="camera">
+                        <input type="file" name="gambar" class="form-control-file" id="gambar-kerusakan"
+                            name="gambar-kerusakan" accept="image/*" capture="camera">
                     </div>
                     <button type="submit" name="submit" class="btn btn-lg btn-primary w-100 fs-6">Kirim Laporan</button>
                 </form>
@@ -110,42 +117,42 @@ if (!isset($_SESSION["username"])){
     </div>
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const selectBox = document.querySelector('.select-box');
-    const selectOption = document.querySelector('.select-option input');
-    const options = document.querySelector('.option');
-    const optionsList = document.querySelectorAll('.option li');
-    const soValue = document.querySelector('#soValue');
-    const optionSearch = document.querySelector('#optionSearch');
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectBox = document.querySelector('.select-box');
+            const selectOption = document.querySelector('.select-option input');
+            const options = document.querySelector('.option');
+            const optionsList = document.querySelectorAll('.option li');
+            const soValue = document.querySelector('#soValue');
+            const optionSearch = document.querySelector('#optionSearch');
 
-    selectOption.addEventListener('click', () => {
-        selectBox.classList.toggle('active');
-    });
+            selectOption.addEventListener('click', () => {
+                selectBox.classList.toggle('active');
+            });
 
-    optionsList.forEach(function(optionsListSingle){
-        optionsListSingle.addEventListener('click',function(){
-            text = this.textContent;
-            soValue.value = text;
-            selectBox.classList.remove('active');
-        })
-    })
-    optionSearch.addEventListener('input',function(){
-        var filter, li, i, textValue;
-        filter = optionSearch.value.toUpperCase();
-        li = optionsList
-        for(i = 0; i < li.length; i++){
-            liCount = li[i];
-            textValue = liCount.textContent || liCount.innerText;
-            if(textValue.toUpperCase().indexOf(filter) > -1){
-                li[i].style.display = '';
-            }else{
-                li[i].style.display = 'none';
-            }
-        }
+            optionsList.forEach(function (optionsListSingle) {
+                optionsListSingle.addEventListener('click', function () {
+                    text = this.textContent;
+                    soValue.value = text;
+                    selectBox.classList.remove('active');
+                })
+            })
+            optionSearch.addEventListener('input', function () {
+                var filter, li, i, textValue;
+                filter = optionSearch.value.toUpperCase();
+                li = optionsList
+                for (i = 0; i < li.length; i++) {
+                    liCount = li[i];
+                    textValue = liCount.textContent || liCount.innerText;
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = '';
+                    } else {
+                        li[i].style.display = 'none';
+                    }
+                }
 
-    })
-}); 
-</script>
+            })
+        }); 
+    </script>
 </body>
 
 </html>

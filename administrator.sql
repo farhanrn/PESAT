@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2024 at 02:59 PM
+-- Generation Time: Feb 03, 2024 at 03:04 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -42,6 +42,7 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`id_user`, `username`, `name`, `email`, `password`, `role`) VALUES
 (1, 'admin1', 'admin satu', 'admin1@gmail.com', '12345', 'admin'),
+(2, 'Yuli', 'Sukma Tri Yuliasari', '', 'koordinator123', 'koordinator'),
 (3, 'junanto', 'Junanto', 'junanto@gmail.com', 'junanto_teknisi123', 'teknisi'),
 (4, 'herawati', 'Herawati', 'herawati@gmail.com', 'herawati_teknisi123', 'teknisi');
 
@@ -146,7 +147,19 @@ CREATE TABLE `pelapor1` (
 --
 
 INSERT INTO `pelapor1` (`id`, `tanggal`, `nama_pelapor`, `nama_teknisi`, `alat`, `deskripsi_kerusakan`, `foto`, `status`, `action`) VALUES
-(26, '2024-01-09', 'coba', '', 'Client AWOS AOCC', 'Terdapat Kabel Yang Putus', '65b7ce4d851bf.jpeg', 'Laporan Terkirim', '');
+(26, '2024-01-09', 'coba', 'Herawati', 'Client AWOS AOCC', 'Terdapat Kabel Yang Putus', '65b7ce4d851bf.jpeg', 'Sedang Diproses', ''),
+(27, '2024-01-31', 'coba', '', 'Client AWOS OBS', 'aduh', '65b9accfb986f.png', 'Laporan Terkirim', ''),
+(28, '2024-02-01', 'Frinst Yehezkiel', 'Herawati', 'Runway 31', 'abcd', '65baffc5d4895.png', 'Sedang Diproses', ''),
+(29, '2024-02-01', 'Frinst Yehezkiel', 'Herawati', 'Peralatan Aerologi', 'zxcvbnm', '65bafff60a951.png', 'Sedang Diproses', ''),
+(30, '2024-02-01', 'Frinst Yehezkiel', '', 'Landasan pacu 13', 'ujnbh', '65bb0017898b8.jpg', 'Laporan Terkirim', ''),
+(31, '2024-02-01', 'Frinst Yehezkiel', 'Herawati', 'Internet MATSC', 'Tidak ada koneksi', '65bb02544c008.jpg', 'Selesai', ''),
+(32, '0000-00-00', 'Frinst Yehezkiel', '', 'Peralatan Observasi Konvensional', '1. pc off', '', 'Laporan Terkirim', ''),
+(33, '0000-00-00', 'Frinst Yehezkiel', '', 'Peralatan Observasi Konvensional', '1. pc off', '', 'Laporan Terkirim', ''),
+(34, '0000-00-00', 'Kepala Stasiun Meteorologi', '', '', 'aaaaaaaaaaa', '', 'Laporan Terkirim', ''),
+(35, '2024-02-03', 'Aerologi BMKG', '', '                                            Peralatan Aerologi                                      ', 'Peralatan rason hangus', '65bde907999a1.jpeg', 'Laporan Terkirim', ''),
+(36, '2024-02-15', 'Aerologi BMKG', 'Herawati', '                                            Landasan pacu 13                                        ', 'aaa', '65bdf2737418d.jpeg', 'Sedang Diproses', ''),
+(37, '2024-02-03', 'Aerologi BMKG', '', '', 'asasas', '65bdf4c3b06ad.jpeg', 'Laporan Terkirim', ''),
+(38, '2024-02-03', 'coba', '', '                                            Peralatan Aerologi                                      ', 'rusak', '65be44cbcb28e.jpeg', 'Laporan Terkirim', '');
 
 -- --------------------------------------------------------
 
@@ -178,7 +191,15 @@ INSERT INTO `user` (`id`, `nama`, `username`, `email`, `password`) VALUES
 (10, 'bryan', 'bryan77', 'bryan@gmail.com', 'bryan123'),
 (11, 'Erlich Bachman', 'erlich_bachman', 'bachmanity@gmail.com', 'bachman123'),
 (12, 'coba', 'coba2', 'cobain@gmail.com', 'coba123'),
-(13, 'Frinst Yehezkiel', 'frinst21', 'frinst', '12345');
+(13, 'Frinst Yehezkiel', 'frinst21', 'frinst', '12345'),
+(14, 'Forecaster MASTC', 'forecaster', 'forecaster@bmkg.hasanuddin', 'forecaster_bmkg'),
+(15, 'Observasi BMKG', 'observasi', 'obeservasi@bmkg.hasanuddin', 'observasi_bmkg'),
+(16, 'Aerologi BMKG', 'aerologi', 'aerologi@bmkg.hasanuddin', 'aero_bmkg'),
+(17, 'Admin Tata Usaha', 'admin', 'admintu@bmkg.hasanuddin', 'admin_bmkg'),
+(18, 'PPK', 'ppk', 'ppk@bmkg.hasanuddin', 'ppk_bmkg'),
+(19, 'Ruang Data dan Informasi', 'datin', 'datin@bmkg.hasanuddin', 'datin_bmkg'),
+(20, 'KTU', 'ktu', 'ktu@bmkg.hasanuddin', 'ktu_bmkg'),
+(21, 'Kepala Stasiun Meteorologi', 'kasmet', 'kasmet@bmkg.hasanuddin', 'kasmet_bmkg');
 
 --
 -- Indexes for dumped tables
@@ -252,13 +273,13 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `pelapor1`
 --
 ALTER TABLE `pelapor1`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

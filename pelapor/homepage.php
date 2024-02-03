@@ -61,7 +61,7 @@ if (!isset($_SESSION["username"])) {
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.php" class="logo d-flex align-items-center">
+      <a href="homepage.php" class="logo d-flex align-items-center">
         <img src="assets/img/BMKG.png" alt="">
       </a>
 
