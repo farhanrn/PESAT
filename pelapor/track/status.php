@@ -6,7 +6,13 @@ if (!isset($_SESSION["username"])) {
     header("location: ../account/login.php");
     exit;
 }
-
+if ($_SESSION['role'] === 'koordinator') {
+    header("Location:./../../koordinator/koordinator.php");
+  } else if ($_SESSION['role'] === 'admin') {
+    header("Location:./../../admin/dashboard.php"); 
+  } else if ($_SESSION['role'] === 'teknisi') {
+    header("Location:./../../teknisi/dashboard.php"); 
+  } else {
 // Id User Identification
 
 if (isset($_GET['id'])) {
@@ -85,13 +91,11 @@ function getStatusButtonClass($status)
         .card-title {
             font-size: 18px;
         }
-
         .box-update {
             height: 440px;
         }
-
         .custom-image {
-            height: 200px;
+            height: 200px; 
             object-fit: cover;
         }
     </style>
@@ -126,7 +130,6 @@ function getStatusButtonClass($status)
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li class="nav-item"><a class="nav-link" href="../homepage.php">Home</a></li>
                     <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="../account/logout.php">Logout</a></li>
@@ -198,5 +201,5 @@ function getStatusButtonClass($status)
     </section>
     <!-- Vendor JS Files -->
 </body>
-
 </html>
+<?php } ?>

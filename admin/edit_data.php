@@ -6,7 +6,13 @@ if (!isset($_SESSION["username"])) {
   header("Location:../index.php");
   exit;
 }
-
+if ($_SESSION['role'] === 'koordinator') {
+    header("Location:./../koordinator/koordinator.php");
+  } else if ($_SESSION['role'] === 'teknisi') {
+    header("Location:./../teknisi/dashboard.php"); 
+} else if ($_SESSION['role'] === 'pelapor') {
+    header("Location:./../pelapor/homepage.php"); 
+  } else {
 $id_user = $_SESSION["id_user"];
 $username = $_SESSION["username"];
 $name = $_SESSION["name"];
@@ -124,10 +130,14 @@ $email = $_SESSION["email"];
                         <i class="fas fa-chart-bar"></i>
                         <span class="nav-item">Data Laporan</span>
                     </a></li>
-                <li><a href="" class="logout">
+                <li><a href="data_alat.php">
+                        <i class="fas fa-dumbbell"></i>
+                        <span class="nav-item">Data Alat</span>
+                </a></li>
+                <li><a href="../logout.php">
                         <i class="fas fa-sign-out-alt"></i>
                         <span class="nav-item">Log out</span>
-                    </a></li>
+                </a></li>
             </ul>
         </nav>
 
@@ -248,3 +258,4 @@ $email = $_SESSION["email"];
 </body>
 
 </html>
+<?php } ?>

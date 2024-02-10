@@ -1,9 +1,18 @@
 <?php
 session_start();
 if (isset($_SESSION["username"])){
-  header("location: ./../homepage.php");
-  exit;
+    if ($_SESSION['role'] === 'koordinator') {
+        header("Location:./../../koordinator/koordinator.php");
+      } else if ($_SESSION['role'] === 'admin') {
+        header("Location:./../../admin/dashboard.php"); 
+      } else if ($_SESSION['role'] === 'teknisi') {
+        header("Location:./../../teknisi/dashboard.php"); 
+      } else {
+        header("Location:./../homepage.php");
 }
+}
+else {
+
 if (isset($_SESSION['error'])) {
     echo "<script>alert('{$_SESSION['error']}');</script>";
     unset($_SESSION['error']);
@@ -42,5 +51,5 @@ if (isset($_SESSION['error'])) {
         </form>
     </div>
 </body>
-
 </html>
+<?php } ?>

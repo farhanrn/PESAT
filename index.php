@@ -5,11 +5,16 @@
         if ($_SESSION['role'] === 'admin') {
             header("Location:./admin/dashboard.php");
             exit;
-        } else {
-            header("Location:./teknisi/dashboard.php");
+        } else if ($_SESSION['role'] === 'pelapor') {
+            header("Location:./pelapor/homepage.php");
             exit;
-        }
-    }
+        } else if ($_SESSION['role'] === 'koordinator') {
+          header("Location:./koordinator/dashboard.php");
+    } else {
+      header("Location:./teknisi/dashboard.php"); 
+    } 
+  } else {
+
 ?>
 
 <!DOCTYPE html>
@@ -64,3 +69,4 @@
     </div> -->
 </body>
 </html>
+<?php } ?>

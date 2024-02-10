@@ -22,8 +22,10 @@ if ($jumlah > 0) {
 
     if ($row['role'] === 'admin') {
         header("Location:./admin/dashboard.php");
+    } else if ($row['role'] === 'teknisi') {
+        header("Location:./teknisi/dashboard.php"); 
     } else {
-        header("Location:./teknisi/dashboard.php");
+        header("Location:./koordinator/koordinator.php");
     }
 }else{
     echo "username atau paswword salah, silahkan login kembali";

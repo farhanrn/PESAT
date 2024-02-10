@@ -7,7 +7,13 @@ if (!isset($_SESSION["username"])) {
   header("Location:../index.php");
   exit;
 }
-
+if ($_SESSION['role'] === 'koordinator') {
+  header("Location:./../koordinator/koordinator.php");
+} else if ($_SESSION['role'] === 'admin') {
+  header("Location:./../admin/dashboard.php"); 
+} else if ($_SESSION['role'] === 'pelapor') {
+  header("Location:./../pelapor/homepage.php"); 
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -324,3 +330,4 @@ function updateView(dataId) {
         
   </body>
 </html>
+<?php } ?>

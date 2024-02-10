@@ -5,6 +5,13 @@ if (!isset($_SESSION["username"])) {
     header("location: ./../account/login.php");
     exit;
 }
+if ($_SESSION['role'] === 'koordinator') {
+    header("Location:./../../koordinator/koordinator.php");
+  } else if ($_SESSION['role'] === 'admin') {
+    header("Location:./../../admin/dashboard.php"); 
+  } else if ($_SESSION['role'] === 'teknisi') {
+    header("Location:./../../teknisi/dashboard.php"); 
+  } else {
 ?>
 
 <html lang="en">
@@ -109,3 +116,4 @@ if (!isset($_SESSION["username"])) {
 </body>
 
 </html>
+<?php } ?>

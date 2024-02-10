@@ -21,10 +21,10 @@ body{
     display : grid;
     grid-template-columns: 280px auto;
     grid-template-rows: 100vh;
-    grid-template-areas: "sidebar main";
+    /* grid-template-areas: "sidebar main"; */
 }
 
-nav{
+/* nav{
     grid-area: sidebar;
     position : relative;
     top : 0;
@@ -35,7 +35,7 @@ nav{
     width: 250px;
     overflow: hidden;
     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
-}
+} */
 
 .logo{
     text-align : center;
@@ -205,6 +205,7 @@ td {
 th {
   background-color: #f2f2f2;
   font-weight: bold;
+  text-align: center;
 }
 
 td a{
@@ -227,7 +228,7 @@ th:nth-child(9) {
 }
 
 td img {
-  width: 70px;
+  width: 100px;
   height: auto;
 }
 

@@ -18,6 +18,7 @@ if ($jumlah > 0) {
     $_SESSION["username"] = $row["username"];
     $_SESSION["nama"] = $row["nama"];
     $_SESSION["email"] = $row["email"];
+    $_SESSION["role"] = $row["role"];
     $_SESSION['password'] = $row['password'];
     
     header("Location:./../homepage.php");

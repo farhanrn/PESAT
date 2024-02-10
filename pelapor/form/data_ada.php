@@ -6,7 +6,13 @@ if (!isset($_SESSION["username"])) {
     header("location: ../account/login.php");
     exit;
 }
-
+if ($_SESSION['role'] === 'koordinator') {
+    header("Location:./../../koordinator/koordinator.php");
+  } else if ($_SESSION['role'] === 'admin') {
+    header("Location:./../../admin/dashboard.php"); 
+  } else if ($_SESSION['role'] === 'teknisi') {
+    header("Location:./../../teknisi/dashboard.php"); 
+  } else {
 // Id User Identification
 
 if (isset($_GET['id'])) {
@@ -155,3 +161,4 @@ function getStatusButtonClass($status)
 </body>
 
 </html>
+<?php } ?>

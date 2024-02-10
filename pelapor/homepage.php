@@ -4,6 +4,13 @@ if (!isset($_SESSION["username"])) {
   header("location: account/login.php");
   exit;
 }
+if ($_SESSION['role'] === 'koordinator') {
+  header("Location:./../koordinator/koordinator.php");
+} else if ($_SESSION['role'] === 'admin') {
+  header("Location:./../admin/dashboard.php"); 
+} else if ($_SESSION['role'] === 'teknisi') {
+  header("Location:./../teknisi/dashboard.php"); 
+} else {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +68,7 @@ if (!isset($_SESSION["username"])) {
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="homepage.php" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/BMKG.png" alt="">
       </a>
 
@@ -137,3 +144,4 @@ if (!isset($_SESSION["username"])) {
 </body>
 
 </html>
+<?php } ?>

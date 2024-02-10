@@ -74,7 +74,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = mysqli_query($connect, $sql);
 
     }
+
     if ($query) {
+        
+        $nama         = $_POST["nama_pelapor"];
+        $alat         = $_POST["alat"];
+        $deskripsi_kerusakan   = $_POST["deskripsi_kerusakan"];
+    
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.fonnte.com/send',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array(
+        'target' => '085343706326',
+        'message' => "Haloo! Ada Laporan baru yang masuk.\nNama Pelapor: $nama \nAlat: $alat\nKerusakan: $deskripsi_kerusakan", 
+        'delay' => '2',
+        'countryCode' => '62', //optional
+        ),
+        CURLOPT_HTTPHEADER => array(
+            'Authorization: #o_nQvfZ!zrFBqKSPLsH' //change TOKEN to your actual token
+        ),
+        ));
+        
+        $response = curl_exec($curl);
+        if (curl_errno($curl)) {
+        $error_msg = curl_error($curl);
+        }
+        curl_close($curl);
+        
+        if (isset($error_msg)) {
+        echo $error_msg;
+        }
+        echo $response;
         header("Location:../track/status.php?message=success");
     } else {
         echo 'Gagal';
