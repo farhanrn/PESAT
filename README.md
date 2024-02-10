@@ -1,4 +1,4 @@
-
+![image](https://github.com/farhanrn/PESAT/assets/85650579/697b9103-fe58-437c-b302-b787ef6d64ba)
 # Pesat (Pelaporan Alat Rusak)
 
 This project is an internship project at the Sultan Hasanuddin Class I Meteorological Station which aims to facilitate integrated and damaged reporting of equipment
@@ -22,28 +22,28 @@ This project is an internship project at the Sultan Hasanuddin Class I Meteorolo
 
 Homepage
 
-![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/user-homepage.jpeg?raw=true)
+![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174309.png?raw=true)
 
 Menu User
 
-![Menu](https://github.com/farhanrn/PESAT/blob/main/screenshots/user%20menu.png?raw=true)
+![Menu](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174428.png?raw=true)
 
 Reporting Form
 
-![form](https://github.com/farhanrn/PESAT/blob/main/screenshots/user_form.png?raw=true)
+![form]([https://github.com/farhanrn/PESAT/blob/main/screenshots/user_form.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174509.png?raw=true))
 
 
 Status
 
-![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/status.png?raw=true)
+![App Screenshot]([https://github.com/farhanrn/PESAT/blob/main/screenshots/status.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175105.png?raw=true))
 
 Index Admin and technician
 
-![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/index-admin-technician.png?raw=true)
+![App Screenshot]((https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175506.png?raw=true))
 
 Dashboard
 
-![](https://github.com/farhanrn/PESAT/blob/main/screenshots/admin_dashboard.png?raw=true)
+![App Screenshot]()
 
 Data Sample in Admin
 
