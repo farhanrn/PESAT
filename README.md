@@ -30,25 +30,27 @@ Menu User
 
 Reporting Form
 
-![form]([https://github.com/farhanrn/PESAT/blob/main/screenshots/user_form.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174509.png 
- raw=true])
+![form](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174509.png?raw=true)
 
 
 Status
 
-![App Screenshot]([https://github.com/farhanrn/PESAT/blob/main/screenshots/status.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175105.png?raw=true))
+![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175105.png?raw=true)
 
 Index Admin and technician
 
-![App Screenshot]((https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175506.png?raw=true))
+![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174116.png?raw=true)
 
-Dashboard
+Dashboard Admin and Technician
 
-![App Screenshot]()
+![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175506.png?raw=true)
+![App Screenshot](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20180703.png?raw=true)
 
-Data Sample in Admin
+Data Sample in Admin and Technician
 
-![](https://github.com/farhanrn/PESAT/blob/main/screenshots/admin.png?raw=true)
+![](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20175650.png?raw=true)
+![](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%20(2148).png?raw=true)
+
 ## Used By
 
 This project is used by the following companies:
