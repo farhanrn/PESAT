@@ -30,7 +30,8 @@ Menu User
 
 Reporting Form
 
-![form]([https://github.com/farhanrn/PESAT/blob/main/screenshots/user_form.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174509.png?raw=true))
+![form]([https://github.com/farhanrn/PESAT/blob/main/screenshots/user_form.png?raw=true](https://github.com/farhanrn/PESAT/blob/main/screenshots/Screenshot%202024-02-08%20174509.png 
+ raw=true])
 
 
 Status
