@@ -1,4 +1,4 @@
-![image](https://github.com/farhanrn/PESAT/assets/85650579/697b9103-fe58-437c-b302-b787ef6d64ba)
+![image]([https://github.com/farhanrn/PESAT/assets/85650579/697b9103-fe58-437c-b302-b787ef6d64ba](https://raw.githubusercontent.com/farhanrn/PESAT/main/assets/img/logo.webp))
 # Pesat (Pelaporan Alat Rusak)
 
 This project is an internship project at the Sultan Hasanuddin Class I Meteorological Station which aims to facilitate integrated and damaged reporting of equipment
